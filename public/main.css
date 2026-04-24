@@ -9,10 +9,27 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #fef9e8; /* Krem lembut */
 }
 
 a {
     text-decoration: none;
+}
+
+/* ========================================
+   WARNA UTAMA
+   ======================================== */
+:root {
+    --primary: #1e3a5f;        /* Biru tua */
+    --primary-dark: #0f2b4a;   /* Biru lebih tua */
+    --primary-light: #3b6e9e;  /* Biru terang */
+    --primary-soft: #e8f0f8;   /* Biru sangat muda */
+    --krem-bg: #fef9e8;         /* Background krem */
+    --krem-card: #fffdf7;       /* Card krem keputihan */
+    --white: #ffffff;
+    --text-dark: #2c2c2c;
+    --text-gray: #6b6b6b;
+    --abugray: #e5e0d5;         /* Abu krem untuk border */
 }
 
 /* ========================================
@@ -25,6 +42,9 @@ a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: box-shadow 0.3s ease;
+    background-color: rgba(255, 253, 247, 0.95);
+    border-radius: 40px;
+    margin: 0 16px;
 }
 
 #Navbar:hover {
@@ -36,14 +56,14 @@ a {
     padding: 8px 16px;
     font-size: 13px;
     font-weight: 500;
-    color: #64748B;
+    color: var(--text-gray);
     border-radius: 50px;
     transition: all 0.25s ease;
 }
 
 .nav-link:hover {
-    color: #FF6B18;
-    background: #FFF5F0;
+    color: var(--primary);
+    background: var(--primary-soft);
 }
 
 .nav-cta {
@@ -52,13 +72,14 @@ a {
     font-size: 13px;
     font-weight: 600;
     color: #fff;
-    background: #FF6B18;
+    background: var(--primary);
     border-radius: 50px;
     transition: all 0.3s ease;
 }
 
 .nav-cta:hover {
-    box-shadow: 0 6px 20px rgba(255, 107, 24, 0.3);
+    background: var(--primary-dark);
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
     transform: translateY(-1px);
 }
 
@@ -68,8 +89,8 @@ a {
 .section-badge {
     display: inline-block;
     padding: 6px 16px;
-    background: #FFF0E9;
-    color: #FF6B18;
+    background: var(--primary-soft);
+    color: var(--primary);
     font-size: 11px;
     font-weight: 700;
     border-radius: 50px;
@@ -81,7 +102,7 @@ a {
     font-weight: 700;
     font-size: 24px;
     line-height: 1.35;
-    color: #1A1D26;
+    color: var(--text-dark);
     margin-top: 10px;
 }
 
@@ -108,7 +129,7 @@ a {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(30, 58, 95, 0.7);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -117,7 +138,7 @@ a {
 }
 
 .slider-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--primary);
     transform: scale(1.08);
 }
 
@@ -134,21 +155,21 @@ a {
 }
 
 .news-card-inner {
-    background: #fff;
+    background: var(--krem-card);
     border-radius: 16px;
     padding: 14px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     height: 100%;
-    border: 1px solid #EEF0F7;
+    border: 1px solid var(--abugray);
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .card-news:hover .news-card-inner {
-    border-color: rgba(255, 107, 24, 0.3);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: var(--primary-light);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .news-thumb {
@@ -174,10 +195,10 @@ a {
     left: 10px;
     z-index: 5;
     padding: 4px 12px;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    color: #FF6B18;
+    color: var(--primary);
     font-size: 10px;
     font-weight: 700;
     border-radius: 50px;
@@ -198,20 +219,20 @@ a {
 }
 
 .agenda-card-inner {
-    background: #fff;
+    background: var(--krem-card);
     border-radius: 16px;
     padding: 14px;
     display: flex;
     align-items: center;
     gap: 14px;
-    border: 1px solid #EEF0F7;
+    border: 1px solid var(--abugray);
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .card:hover .agenda-card-inner {
-    border-color: rgba(255, 107, 24, 0.3);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .agenda-date {
@@ -223,8 +244,8 @@ a {
     justify-content: center;
     flex-shrink: 0;
     border-radius: 12px;
-    background: #FFF0E9;
-    color: #FF6B18;
+    background: var(--primary-soft);
+    color: var(--primary);
     gap: 2px;
 }
 
@@ -233,6 +254,8 @@ a {
    ======================================== */
 #Peta-Sekolah img {
     transition: transform 0.6s ease;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 #Peta-Sekolah:hover img {
@@ -257,17 +280,17 @@ a {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-    background: #EEF0F7;
+    background: var(--abugray);
     border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #FF6B18;
+    background: var(--primary);
     border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #e5571f;
+    background: var(--primary-dark);
 }
 
 /* ========================================
@@ -281,6 +304,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background: var(--krem-card);
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--abugray);
 }
 
 #Content-wrapper ul {
@@ -318,11 +345,11 @@ a {
 }
 
 #Content-wrapper ins {
-    color: #FF6B18;
+    color: var(--primary);
 }
 
 #Content-wrapper a {
-    color: #FF6B18;
+    color: var(--primary);
 }
 
 #Content-wrapper a:hover {
@@ -341,6 +368,39 @@ a {
     object-fit: contain;
     object-position: left;
     border-radius: 16px;
+}
+
+/* ========================================
+   FOOTER (BIRU TUA - SEPERTI AWAL)
+   ======================================== */
+footer {
+    background-color: #1e3a5f !important;
+    color: #ffffff !important;
+}
+
+footer a {
+    color: #ffffff !important;
+}
+
+footer a:hover {
+    color: #7ab3c8 !important;
+    text-decoration: underline;
+}
+
+/* ========================================
+   TOMBOL
+   ======================================== */
+.btn-primary, 
+button[type="submit"], 
+.bg-\[\#FF6B18\] {
+    background-color: var(--primary) !important;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, 
+button[type="submit"]:hover, 
+.bg-\[\#FF6B18\]:hover {
+    background-color: var(--primary-dark) !important;
 }
 
 /* ========================================
@@ -372,4 +432,24 @@ section:nth-of-type(3) {
 
 section:nth-of-type(4) {
     animation-delay: 0.15s;
+}
+
+/* ========================================
+   ELEMEN ABU-ABU LAINNYA
+   ======================================== */
+.text-gray, .text-secondary {
+    color: var(--text-gray);
+}
+
+.bg-gray-light {
+    background-color: var(--abugray);
+}
+
+.border-gray {
+    border-color: var(--abugray);
+}
+
+/* Card shadow lebih halus */
+.shadow-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }

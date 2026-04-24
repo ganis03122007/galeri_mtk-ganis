@@ -2,7 +2,7 @@
  <section id="Galeri-Sekolah" style="margin-top: 48px;">
         <div class="max-w-[1130px] mx-auto text-center" style="margin-bottom: 28px;">
             <span class="section-badge">GALERI SEKOLAH</span>
-            <h2 class="section-title">Dokumentasi Kegiatan<br>Pertanian SMK Al-Hafidz</h2>
+            <h2 class="section-title">Dokumentasi Kegiatan<br>Pembelajaran Matematika</h2>
         </div>
 
         <div class="main-carousel max-w-[1130px] mx-auto">
@@ -15,7 +15,7 @@
                 @endphp
                 <div class="featured-news-card relative w-full flex shrink-0 overflow-hidden" style="height: 440px; border-radius: 16px;">
                     @if($firstFoto)
-                       <img src="{{ asset('storage/galery-fotos/' . $firstFoto->file. '.png') }}" class="thumbnail absolute w-full h-full object-cover" alt="{{ $postJudul }}" />
+                       <img src="{{ asset('storage/' . $firstFoto->file) }}" class="thumbnail absolute w-full h-full object-cover" alt="{{ $postJudul }}" />
                     @else
                         <div class="absolute w-full h-full bg-gray-300 flex items-center justify-center">
                             <span class="text-gray-500">Tidak ada foto</span>

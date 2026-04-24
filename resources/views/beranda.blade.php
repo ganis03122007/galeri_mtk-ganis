@@ -8,6 +8,7 @@
 
 @include('components._navbar')
 
+
 <!-- Galeri -->
 @include('components._galeri')
 
@@ -15,14 +16,23 @@
     <section class="max-w-[1130px] mx-auto" style="margin-top: 72px;">
         <div class="flex" style="gap: 30px;">
 
-        <!-- agenda -->
-        @include('components._agenda')
-
         <!-- informasi terkini -->
         @include('components._informasi')
 
+        <!-- agenda -->
+        @include('components._agenda')
+
         </div>
     </section>
+
+    <!-- PETA SEKOLAH -->
+    @include('components._peta')
+
+    <!-- FOOTER -->
+    @include('components._footer')
+
+    <!-- SCRIPTS -->
+    @include('components._scripts')
   
 </body>
 </html>

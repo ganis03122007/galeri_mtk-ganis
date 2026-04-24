@@ -1,8 +1,8 @@
  <!-- AGENDA SEKOLAH (DINAMIS DARI POSTS) --> 
  <div id="Agenda-Sekolah" class="flex flex-col" style="gap: 24px; width: 33.4%;">
                 <div>
-                    <span class="section-badge" style="text-align: left;">AGENDA SEKOLAH</span>
-                    <h2 class="section-title" style="text-align: left; font-size: 22px; margin-top: 6px;">Jadwal Mendatang</h2>
+                    <span class="section-badge" style="text-align: left;">KEGIATAN</span>
+                    <h2 class="section-title" style="text-align: left; font-size: 22px; margin-top: 6px;">Tentang</h2>
                 </div>
 
                 <div class="flex flex-col" style="gap: 12px;">

@@ -3,7 +3,7 @@
                 <div class="flex justify-between items-end">
                     <div>
                         <span class="section-badge" style="text-align: left;">INFORMASI TERKINI</span>
-                        <h2 class="section-title" style="text-align: left; font-size: 22px; margin-top: 6px;">Berita & Prestasi Terbaru</h2>
+                        <h2 class="section-title" style="text-align: left; font-size: 22px; margin-top: 6px;">Hasil Pembelajaran & Materi Matematika</h2>
                     </div>
                     <a href="{{ route('home') }}#Informasi-Terkini" class="font-semibold text-[#FF6B18] text-sm hover:underline">Lihat Semua →</a>
                 </div>
