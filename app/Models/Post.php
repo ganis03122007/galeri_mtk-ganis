@@ -24,7 +24,7 @@ class Post extends Model
     }
 
     // relasi ke galery
-    public function galery()
+    public function galeries()
     {
         return $this->hasMany(Galery::class);
     }

@@ -113,13 +113,13 @@
             flex-shrink: 0;
         }
 
-        .article-body {
-            background: #fff;
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid #EEF0F7;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-        }
+      .article-body {
+    background: #F3F4F6;  /* Ganti dari putih ke abu-abu muda */
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
 
         /* Photo gallery section */
         .gallery-section {
@@ -136,13 +136,13 @@
             gap: 10px;
         }
 
-        .gallery-section-title::before {
-            content: '';
-            width: 4px;
-            height: 20px;
-            background: #FF6B18;
-            border-radius: 4px;
-        }
+     .gallery-section-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: #6B7280;  /* ABU-ABU TUA */
+    border-radius: 4px;
+}
 
         .photo-grid {
             display: grid;
@@ -412,50 +412,51 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        /* Kategori tag */
-        .kategori-tag {
-            display: inline-block;
-            padding: 5px 14px;
-            background: rgba(255,107,24,0.12);
-            color: #FF6B18;
-            font-size: 11px;
-            font-weight: 700;
-            border-radius: 50px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            backdrop-filter: blur(4px);
-        }
+   /* Kategori tag */
+.kategori-tag {
+    display: inline-block;
+    padding: 5px 14px;
+    background: #6B7280;  /* abu-abu tua */
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
 
-        .kategori-tag-white {
-            background: rgba(255,255,255,0.15);
-            color: white;
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
+.kategori-tag-white {
+    background: rgba(255,255,255,0.15);
+    color: white;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
     </style>
 </head>
 <body class="font-[Poppins] bg-[#F9F9FC]" style="padding-bottom: 0;">
 
-    <!-- NAVBAR -->
-    <nav id="Navbar" class="max-w-[1130px] mx-auto flex justify-between items-center bg-white rounded-full" style="margin-top: 20px; padding: 10px 12px 10px 20px; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
-        <a href="{{ route('home') }}" class="flex items-center" style="gap: 10px;">
-            <div class="flex items-center justify-center bg-[#FF6B18] text-white" style="width: 34px; height: 34px; border-radius: 8px;">
-                <img src="{{ asset('assets/images/icons/courthouse.svg') }}" alt="icon" style="width: 18px; height: 18px; filter: invert(1);" />
-            </div>
-            <span class="font-bold" style="font-size: 14px; color: #1A1D26; letter-spacing: -0.3px;">SMK Indonesia Digital</span>
-        </a>
+    <!-- ========== NAVBAR BIRU FULL LEBAR - SAMA SEPERTI HALAMAN UTAMA ========== -->
+    <nav id="Navbar" style="background: #1A3A6F; width: 100%; box-shadow: 0 2px 16px rgba(0,0,0,0.08);">
+        <div style="max-width: 1130px; margin: 0 auto; padding: 12px 20px;">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+                
+                <!-- Logo -->
+                <a href="{{ route('home') }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <div>
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="icon" style="width: 20px; height: 20px;" />
+                    </div>
+                    <span style="font-weight: bold; font-size: 14px; color: white; letter-spacing: -0.3px;">galeri matematika</span>
+                </a>
 
-        <div class="flex items-center" style="gap: 4px;">
-            <a href="{{ route('home') }}#Galeri-Sekolah" class="nav-link">Galeri</a>
-            <a href="{{ route('home') }}#Informasi-Terkini" class="nav-link">Informasi</a>
-            <a href="{{ route('home') }}#Agenda-Sekolah" class="nav-link">Agenda</a>
-            <a href="{{ route('home') }}#Peta-Sekolah" class="nav-link">Peta</a>
-            <div style="width: 1px; height: 20px; background: #E8EBF4; margin: 0 8px;"></div>
-            @auth
-            <a href="{{ url('/admin') }}" class="nav-cta">Dashboard</a>
-            @else
-            <a href="{{ url('/admin') }}" class="nav-cta">Login</a>
-            @endauth
+                <!-- Menu -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <a href="{{ route('home') }}#Galeri-Sekolah" style="color: white; text-decoration: none; font-size: 14px; padding: 8px 12px;">Galeri</a>
+                    <a href="{{ route('home') }}#Informasi-Terkini" style="color: white; text-decoration: none; font-size: 14px; padding: 8px 12px;">Informasi</a>
+                    <a href="{{ route('home') }}#Agenda-Sekolah" style="color: white; text-decoration: none; font-size: 14px; padding: 8px 12px;">Agenda</a>
+                    <a href="{{ route('home') }}#Peta-Sekolah" style="color: white; text-decoration: none; font-size: 14px; padding: 8px 12px;">Peta</a>
+                </div>
+
+            </div>
         </div>
     </nav>
 
@@ -503,7 +504,7 @@
 
         <!-- MAIN CONTENT -->
         <div class="content-main">
-            <div class="article-body">
+           <div class="article-body" style="background: #F3F4F6;">
                 <div id="Content-wrapper">
                     {!! $post->isi !!}
                 </div>
@@ -512,7 +513,7 @@
             <!-- GALERI FOTO -->
             @if($allPhotos->isNotEmpty())
             <div class="gallery-section">
-                <div class="article-body" style="padding: 28px;">
+    <div class="article-body" style="padding: 28px; background: #F3F4F6;">
                     <h3 class="gallery-section-title">Galeri Foto ({{ $allPhotos->count() }})</h3>
                     <div class="photo-grid">
                         @foreach($allPhotos as $foto)
@@ -529,61 +530,61 @@
             @endif
         </div>
 
-        <!-- SIDEBAR -->
-        <div class="content-sidebar">
-            <!-- Author Card -->
-            <div class="sidebar-card">
-                <div class="sidebar-title">Ditulis Oleh</div>
-                <div class="author-card" style="margin-top: 0;">
-                    <div class="author-avatar">
-                        {{ strtoupper(substr($post->user->name ?? 'A', 0, 1)) }}
-                    </div>
-                    <div class="author-info">
-                        <h4>{{ $post->user->name ?? 'Admin' }}</h4>
-                        <span>{{ $post->created_at->translatedFormat('d F Y, H:i') }} WIB</span>
-                    </div>
-                </div>
+ <!-- SIDEBAR -->
+<div class="content-sidebar">
+    <!-- Author Card -->
+    <div class="sidebar-card" style="background: #F3F4F6;">
+        <div class="sidebar-title">Ditulis Oleh</div>
+        <div class="author-card" style="margin-top: 0; background: #E5E7EB;">
+            <div class="author-avatar" style="background: #6B7280;">
+                {{ strtoupper(substr($post->user->name ?? 'A', 0, 1)) }}
             </div>
-
-            <!-- Kategori Info -->
-            <div class="sidebar-card" style="margin-top: 20px;">
-                <div class="sidebar-title">Kategori</div>
-                <span class="kategori-tag">{{ $post->kategori->judul ?? 'Umum' }}</span>
+            <div class="author-info">
+                <h4>{{ $post->user->name ?? 'Admin' }}</h4>
+                <span>{{ $post->created_at->translatedFormat('d F Y, H:i') }} WIB</span>
             </div>
-
-            <!-- Related Posts -->
-            @if($relatedPosts->isNotEmpty())
-            <div class="sidebar-card" style="margin-top: 20px;">
-                <div class="sidebar-title">Postingan Terkait</div>
-                @foreach($relatedPosts as $related)
-                    @php
-                        $relatedThumb = null;
-                        if ($related->galery->isNotEmpty()) {
-                            $firstGal = $related->galery->first();
-                            if ($firstGal->fotos->isNotEmpty()) {
-                                $relatedThumb = $firstGal->fotos->first()->file;
-                            }
-                        }
-                    @endphp
-                    <a href="{{ route('post.show', $related) }}" class="related-post-item">
-                        <div class="related-post-thumb">
-                            @if($relatedThumb)
-                                <img src="{{ asset('storage/' . $relatedThumb) }}" alt="{{ $related->judul }}" loading="lazy" />
-                            @else
-                                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #FF6B18, #FF9A5C); display: flex; align-items: center; justify-content: center;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                                </div>
-                            @endif
-                        </div>
-                        <div class="related-post-info">
-                            <h4>{{ $related->judul }}</h4>
-                            <span>{{ $related->created_at->translatedFormat('d M Y') }}</span>
-                        </div>
-                    </a>
-                @endforeach
-            </div>
-            @endif
         </div>
+    </div>
+
+    <!-- Kategori Info -->
+    <div class="sidebar-card" style="margin-top: 20px; background: #F3F4F6;">
+        <div class="sidebar-title">Kategori</div>
+        <span class="kategori-tag" style="background: #6B7280; color: white;">{{ $post->kategori->judul ?? 'Umum' }}</span>
+    </div>
+
+    <!-- Related Posts -->
+    @if($relatedPosts->isNotEmpty())
+    <div class="sidebar-card" style="margin-top: 20px; background: #F3F4F6;">
+        <div class="sidebar-title">Postingan Terkait</div>
+        @foreach($relatedPosts as $related)
+            @php
+                $relatedThumb = null;
+                if ($related->galery->isNotEmpty()) {
+                    $firstGal = $related->galery->first();
+                    if ($firstGal->fotos->isNotEmpty()) {
+                        $relatedThumb = $firstGal->fotos->first()->file;
+                    }
+                }
+            @endphp
+            <a href="{{ route('post.show', $related) }}" class="related-post-item">
+                <div class="related-post-thumb">
+                    @if($relatedThumb)
+                        <img src="{{ asset('storage/' . $relatedThumb) }}" alt="{{ $related->judul }}" loading="lazy" />
+                    @else
+                        <div style="width: 100%; height: 100%; background: #9CA3AF; display: flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                        </div>
+                    @endif
+                </div>
+                <div class="related-post-info">
+                    <h4>{{ $related->judul }}</h4>
+                    <span>{{ $related->created_at->translatedFormat('d M Y') }}</span>
+                </div>
+            </a>
+        @endforeach
+    </div>
+    @endif
+</div>
     </section>
 
     <!-- FOOTER -->
@@ -593,9 +594,9 @@
                 <div class="flex items-center justify-center bg-[#FF6B18] text-white" style="width: 26px; height: 26px; border-radius: 6px;">
                     <img src="{{ asset('assets/images/icons/courthouse.svg') }}" alt="icon" style="width: 14px; height: 14px; filter: invert(1);" />
                 </div>
-                <span class="font-semibold text-[#A3A6AE]" style="font-size: 12px;">SMK Indonesia Digital</span>
+                <span class="font-semibold text-[#A3A6AE]" style="font-size: 12px;">MATEMATIKA BISA</span>
             </div>
-            <p class="text-[#A3A6AE]" style="font-size: 12px;">&copy; {{ date('Y') }} · Uji Kompetensi Keahlian PPLG</p>
+            <p class="text-[#A3A6AE]" style="font-size: 12px;">&copy; {{ date('Y') }} · Uji Kompetensi Keahlian PPLG </p>
         </div>
     </footer>
 

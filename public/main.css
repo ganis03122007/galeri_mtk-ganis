@@ -9,7 +9,7 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fef9e8; /* Krem lembut */
+    background-color: #fef9e8 !important; /* Krem lembut - dipaksa pakai !important */
 }
 
 a {
@@ -452,4 +452,49 @@ section:nth-of-type(4) {
 /* Card shadow lebih halus */
 .shadow-card {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ========================================
+   CARD BIRU GRADASI (INFORMASI TERKINI)
+   ======================================== */
+.news-card-inner-blue {
+    background: linear-gradient(135deg, #BFDBFE 0%, #93C5FD 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.news-card-inner-blue:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.25);
+}
+
+/* Badge untuk card biru */
+.card-badge-blue {
+    background: #6B7280;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    padding: 4px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+}
+
+/* Judul card biru */
+.news-title-blue {
+    color: #1E3A5F;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Tanggal card biru */
+.news-date-blue {
+    color: #475569;
+    font-size: 12px;
 }
