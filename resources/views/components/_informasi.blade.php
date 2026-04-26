@@ -5,12 +5,13 @@
     <div class="flex justify-between items-end">
         <div>
             <span class="section-badge" style="text-align: left;">INFORMASI TERKINI</span>
-            <h2 class="section-title" style="text-align: left; font-size: 22px; margin-top: 6px;">Berita & Prestasi Terbaru</h2>
+            <h2 class="section-title" style="text-align: left; font-size: 22px; margin-top: 6px;">Berita & pembelajaran Terbaru</h2>
         </div>
         {{-- UBAH: Link "Lihat Semua" mengarah ke route semua.postingan --}}
-        <a href="{{ route('post.index') }}" class="font-semibold text-[#6B7280] text-sm hover:underline transition-all hover:gap-2 flex items-center">
-            Lihat Semua <span class="ml-1">→</span>
-        </a>
+       {{-- Gunakan route('post.index') agar sinkron dengan web.php --}}
+<a href="{{ route('post.index') }}" class="font-semibold text-[#1A1D26] text-sm hover:underline flex items-center">
+    Lihat Semua <span class="ml-1">→</span>
+</a>
     </div>
 
     <div class="flex" style="gap: 20px;">

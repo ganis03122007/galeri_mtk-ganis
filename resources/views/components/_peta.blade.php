@@ -2,7 +2,7 @@
 <section id="Peta-Sekolah" class="max-w-[1130px] mx-auto" style="margin-top: 72px;">
     <div class="text-center" style="margin-bottom: 28px;">
         <span class="section-badge">Update</span>
-        <h2 class="section-title">Kegiatan Matematika<br>seruuu</h2>
+        <h2 class="section-title">peta sekolah smk<br>al-hafidz</h2>
     </div>
 
     <div class="bg-white overflow-hidden flex" style="border-radius: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); border: 1px solid #EEF0F7;">
@@ -13,7 +13,7 @@
             <h3 class="font-bold" style="font-size: 20px; color: white;">Selengkapnya</h3>
             
             <p style="font-size: 13px; line-height: 1.7; color: #E5E7EB;">
-                Jelajahi denah sekolah kami untuk menemukan ruang kelas, laboratorium komputer, perpustakaan, hingga fasilitas olahraga dengan mudah.
+                Biar nggak bingung, kamu bisa langsung lihat lokasi sekolah kami di peta. Jadi lebih gampang buat datang ke sini!
             </p>
             
             @if($petaSekolah && $petaSekolah->fotos->isNotEmpty())

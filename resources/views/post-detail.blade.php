@@ -552,20 +552,20 @@
         <span class="kategori-tag" style="background: #6B7280; color: white;">{{ $post->kategori->judul ?? 'Umum' }}</span>
     </div>
 
-    <!-- Related Posts -->
-    @if($relatedPosts->isNotEmpty())
-    <div class="sidebar-card" style="margin-top: 20px; background: #F3F4F6;">
-        <div class="sidebar-title">Postingan Terkait</div>
-        @foreach($relatedPosts as $related)
-            @php
-                $relatedThumb = null;
-                if ($related->galery->isNotEmpty()) {
-                    $firstGal = $related->galery->first();
-                    if ($firstGal->fotos->isNotEmpty()) {
-                        $relatedThumb = $firstGal->fotos->first()->file;
-                    }
+   <!-- Related Posts -->
+@if($relatedPosts->isNotEmpty())
+<div class="sidebar-card" style="margin-top: 20px; background: #F3F4F6;">
+    <div class="sidebar-title">Postingan Terkait</div>
+    @foreach($relatedPosts as $related)
+        @php
+            $relatedThumb = null;
+            if ($related->galeries->isNotEmpty()) {
+                $firstGal = $related->galeries->first();
+                if ($firstGal->fotos->isNotEmpty()) {
+                    $relatedThumb = $firstGal->fotos->first()->file;
                 }
-            @endphp
+            }
+        @endphp
             <a href="{{ route('post.show', $related) }}" class="related-post-item">
                 <div class="related-post-thumb">
                     @if($relatedThumb)

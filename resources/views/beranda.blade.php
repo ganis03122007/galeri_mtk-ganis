@@ -9,25 +9,22 @@
 @include('components._navbar')
 
 
-<!-- Galeri -->
-@include('components._galeri')
+@if(Request::is('/'))
+    @include('components._galeri')
 
-    <!-- INFORMASI TERKINI & AGENDA SEKOLAH -->
     <section class="max-w-[1130px] mx-auto" style="margin-top: 72px;">
         <div class="flex" style="gap: 30px;">
-
-        <!-- informasi terkini -->
-        @include('components._informasi')
-
-        <!-- agenda -->
-        @include('components._agenda')
-
+            @include('components._informasi')
+            @include('components._agenda')
         </div>
     </section>
 
-    <!-- PETA SEKOLAH -->
     @include('components._peta')
+@endif
 
+<div class="py-12">
+    @yield('content')
+</div>
     <!-- FOOTER -->
     @include('components._footer')
 

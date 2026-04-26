@@ -498,3 +498,14 @@ section:nth-of-type(4) {
     color: #475569;
     font-size: 12px;
 }
+
+/* Efek hover untuk card biru di halaman arsip */
+.post-card-blue {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card-blue:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px -8px rgba(59, 130, 246, 0.3);
+}
+
